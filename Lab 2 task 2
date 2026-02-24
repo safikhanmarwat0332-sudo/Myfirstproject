@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Declaring different types of variables
+    int a = 10;
+    float b = 5.5;
+    double c = 20.12345;
+    char d = 'A';
+    bool e = true;
+
+    // Printing value, size and address of int
+    cout << "Integer Value: " << a << endl;
+    cout << "Size of int: " << sizeof(a) << " bytes" << endl;
+    cout << "Address of int: " << &a << endl << endl;
+
+    // Printing value, size and address of float
+    cout << "Float Value: " << b << endl;
+    cout << "Size of float: " << sizeof(b) << " bytes" << endl;
+    cout << "Address of float: " << &b << endl << endl;
+
+    // Printing value, size and address of double
+    cout << "Double Value: " << c << endl;
+    cout << "Size of double: " << sizeof(c) << " bytes" << endl;
+    cout << "Address of double: " << &c << endl << endl;
+
+    // Printing value, size and address of char
+    cout << "Char Value: " << d << endl;
+    cout << "Size of char: " << sizeof(d) << " byte" << endl;
+    cout << "Address of char: " << (void*)&d << endl << endl;
+
+    // Printing value, size and address of bool
+    cout << "Bool Value: " << e << endl;
+    cout << "Size of bool: " << sizeof(e) << " byte" << endl;
+    cout << "Address of bool: " << &e << endl;
+
+    return 0;
+}
+
