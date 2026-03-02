@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // b. Define variables
+    float R1, R2, R3;          // Star resistances
+    float R_AB, R_BC, R_CA;    // Delta resistances
+    float sum;
+
+    // c. Initialize variables
+    R1 = R2 = R3 = 0;
+    R_AB = R_BC = R_CA = 0;
+    sum = 0;
+
+    // d. Prompt user to enter star resistances
+    cout << "Enter Star Resistance R1: ";
+    cin >> R1;
+
+    cout << "Enter Star Resistance R2: ";
+    cin >> R2;
+
+    cout << "Enter Star Resistance R3: ";
+    cin >> R3;
+
+    // e. Calculate corresponding delta resistances
+    sum = (R1 * R2) + (R2 * R3) + (R3 * R1);
+
+    if(R1 != 0 && R2 != 0 && R3 != 0)
+    {
+        R_AB = sum / R3;
+        R_BC = sum / R1;
+        R_CA = sum / R2;
+
+        // f. Display results
+        cout << "\nStar Resistances:";
+        cout << "\nR1 = " << R1;
+        cout << "\nR2 = " << R2;
+        cout << "\nR3 = " << R3;
+
+        cout << "\n\nEquivalent Delta Resistances:";
+        cout << "\nR_AB = " << R_AB;
+        cout << "\nR_BC = " << R_BC;
+        cout << "\nR_CA = " << R_CA;
+    }
+    else
+    {
+        cout << "Star resistances must not be zero.";
+    }
+
+    return 0;
+}
