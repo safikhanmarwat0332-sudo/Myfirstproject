@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // b. Define variables
+    float R1, R2, I_total;
+    float I1, I2;
+
+    // c. Initialize variables
+    R1 = 0;
+    R2 = 0;
+    I_total = 0;
+    I1 = 0;
+    I2 = 0;
+
+    // d. Prompt user to enter values
+    cout << "Enter value of resistor R1 (ohms): ";
+    cin >> R1;
+
+    cout << "Enter value of resistor R2 (ohms): ";
+    cin >> R2;
+
+    cout << "Enter total current (I_total in amps): ";
+    cin >> I_total;
+
+    // Check to avoid division by zero
+    if(R1 + R2 != 0)
+    {
+        // e. Calculate branch currents
+        I1 = I_total * (R2 / (R1 + R2));
+        I2 = I_total * (R1 / (R1 + R2));
+
+        // f. Display results
+        cout << "\nResistor R1 = " << R1 << " ohms";
+        cout << "\nResistor R2 = " << R2 << " ohms";
+        cout << "\nTotal Current = " << I_total << " amps";
+        cout << "\nBranch Current I1 (through R1) = " << I1 << " amps";
+        cout << "\nBranch Current I2 (through R2) = " << I2 << " amps";
+    }
+    else
+    {
+        cout << "Invalid resistor values � division by zero.";
+    }
+
+    return 0;
+}
