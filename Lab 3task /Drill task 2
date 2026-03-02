@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // a. Define variables
+    float radius, circumference;
+
+    // b. Initialize variables
+    radius = 0;
+    circumference = 1;
+
+    // c. Prompt user to enter radius
+    cout << "Enter the radius of the circle: ";
+    cin >> radius;
+
+    // d. Calculate circumference
+    circumference = 2 * 3.1416 * radius;
+
+    // e. Display results
+    cout << "\nRadius = " << radius;
+    cout << "\nCircumference = " << circumference;
+
+    return 0;
+}
