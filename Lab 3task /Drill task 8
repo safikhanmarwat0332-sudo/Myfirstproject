@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>   // For sqrt function
+using namespace std;
+
+int main()
+{
+    // a. Define variables
+    float base, perpendicular, hypotenuse;
+
+    // Initialize variables
+    base = 0;
+    perpendicular = 0;
+    hypotenuse = 0;
+
+    // b. Prompt user to enter values
+    cout << "Enter the value of base: ";
+    cin >> base;
+
+    cout << "Enter the value of perpendicular: ";
+    cin >> perpendicular;
+
+    // c. Calculate hypotenuse
+    hypotenuse = sqrt((base * base) + (perpendicular * perpendicular));
+
+    // d. Display result
+    cout << "\nBase = " << base;
+    cout << "\nPerpendicular = " << perpendicular;
+    cout << "\nHypotenuse = " << hypotenuse;
+
+    return 0;
+}
