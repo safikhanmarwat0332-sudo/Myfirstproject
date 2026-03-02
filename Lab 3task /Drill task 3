@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // a. Define variables
+    float length, width, area, perimeter;
+
+    // b. Initialize variables
+    length = 0;
+    width = 0;
+    area = 1;
+    perimeter = 1;
+
+    // c. Prompt user to enter values
+    cout << "Enter the length of rectangle: ";
+    cin >> length;
+
+    cout << "Enter the width of rectangle: ";
+    cin >> width;
+
+    // d. Calculate area and perimeter
+    area = length * width;
+    perimeter = 2 * (length + width);
+
+    // e. Display results
+    cout << "\nLength = " << length;
+    cout << "\nWidth = " << width;
+    cout << "\nArea = " << area;
+    cout << "\nPerimeter = " << perimeter;
+
+    return 0 ;}
